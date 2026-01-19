@@ -1,4 +1,4 @@
-@media screen and (max-width: 1400px) { 
+@media screen and (max-width: 1400px) {
   .about-containers {
     flex-wrap: wrap;
   }
@@ -8,7 +8,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1320px) {
   #desktop-nav {
     display: none;
   }
