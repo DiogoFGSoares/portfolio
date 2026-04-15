@@ -401,6 +401,24 @@ article .icon {
   /* height: auto; */
 }
 
+#projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+#projects .details-container {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#projects .article-container {
+  display: block;
+}
+
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
@@ -408,9 +426,10 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
-  max-height: 400px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
 .project-title {
