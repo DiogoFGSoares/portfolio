@@ -6,6 +6,11 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  color: #171717;
+  background:
+    radial-gradient(circle at top left, rgba(20, 126, 251, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(255, 182, 193, 0.2), transparent 24%),
+    linear-gradient(180deg, #fcfdff 0%, #f4f7fb 100%);
 }
 
 html {
@@ -30,7 +35,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.3;
+  opacity: 0.65;
   text-decoration: underline;
   text-underline-offset: 1rem;
 }
@@ -55,6 +60,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(16px);
+  background: rgba(244, 248, 252, 0.72);
+  border-bottom: 1px solid rgba(20, 126, 251, 0.08);
 }
 .nav-links {
   gap: 2rem;
@@ -65,12 +76,29 @@ nav {
 .nav-links li a {
   color: black;
   text-decoration: none;
+  position: relative;
+  padding-bottom: 0.3rem;
 }
 
 .nav-links li a:hover {
-  opacity: 0.3;
+  opacity: 0.75;
   text-decoration: underline;
   text-underline-offset: 1rem;
+}
+
+.active-link {
+  color: #147efb !important;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15rem;
+  width: 100%;
+  height: 0.18rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #147efb, #69a8ff);
 }
 
 /* HAMBURGUER MENU */
@@ -103,11 +131,13 @@ nav {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: rgba(244, 248, 252, 0.96);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  border-radius: 1rem;
+  box-shadow: 0 20px 45px rgba(12, 37, 63, 0.12);
 }
 
 .menu-links a {
@@ -155,6 +185,7 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+  scroll-margin-top: 8rem;
 }
 
 .section-container {
@@ -167,6 +198,19 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
+  position: relative;
+}
+
+#profile::before {
+  content: "";
+  position: absolute;
+  inset: 8% 0 auto 8%;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 999px;
+  background: rgba(20, 126, 251, 0.08);
+  filter: blur(14px);
+  z-index: -1;
 }
 
 .section__pic-container {
@@ -177,6 +221,8 @@ section {
 }
 .section__pic {
   border-radius: 50%;
+  box-shadow: 0 20px 45px rgba(20, 126, 251, 0.14);
+  animation: floatPortrait 5.5s ease-in-out infinite;
 }
 
 .section__text {
@@ -200,6 +246,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  letter-spacing: -0.04em;
 }
 #socials-container {
   display: flex;
@@ -220,6 +267,7 @@ section {
 }
 #socials-container i:hover {
   color: #147efb;
+  transform: translateY(-4px) scale(1.04);
 }
 
 /* BUTTONS */
@@ -236,6 +284,7 @@ section {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+  box-shadow: 0 10px 20px rgba(23, 23, 23, 0.04);
 }
 .btn-color-1,
 .btn-color-2 {
@@ -253,12 +302,14 @@ section {
 }
 .btn-color-1:hover {
   background: rgb(0, 0, 0);
+  transform: translateY(-2px);
 }
 .btn-color-2 {
   background: none;
 }
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
+  transform: translateY(-2px);
 }
 .btn-container {
   gap: 1rem;
@@ -302,7 +353,6 @@ section {
 
 #about {
   position: relative;
-  background-color: white;
   /* height: auto; */
 }
 
@@ -330,16 +380,32 @@ section {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
+  transition: transform 300ms ease;
+  background: transparent;
+  border-radius: 999px;
+  padding: 0;
+  box-shadow: none;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 12px 20px rgba(10, 35, 66, 0.16));
+}
+
+.arrow:hover {
+  transform: translateY(6px);
 }
 
 .details-container {
   padding: 1.5rem;
-  background: white;
+  background: rgba(248, 251, 255, 0.78);
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
   width: -webkit-fill-available;
+  box-shadow: 0 18px 38px rgba(10, 35, 66, 0.06);
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease,
+    border-color 300ms ease;
 }
 .section-container {
   gap: 4rem;
@@ -421,7 +487,20 @@ article .icon {
 
 .color-container {
   border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  background: linear-gradient(
+    180deg,
+    rgba(248, 251, 255, 0.94),
+    rgba(239, 245, 252, 0.96)
+  );
+}
+
+#projects .color-container:hover,
+#about .details-container:hover,
+#experience .details-container:hover,
+.contact-info-upper-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 50px rgba(10, 35, 66, 0.12);
+  border-color: rgba(20, 126, 251, 0.28);
 }
 
 .project-img {
@@ -430,6 +509,7 @@ article .icon {
   height: 220px;
   object-fit: cover;
   display: block;
+  transition: transform 400ms ease, filter 400ms ease;
 }
 
 .project-title {
@@ -440,6 +520,11 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+
+#projects .details-container:hover .project-img {
+  transform: scale(1.03);
+  filter: saturate(1.05);
 }
 
 /* CONTACT */
@@ -457,9 +542,10 @@ article .icon {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgba(246, 250, 255, 0.82);
   margin: 2rem auto;
   padding: 0.5rem;
+  box-shadow: 0 18px 38px rgba(10, 35, 66, 0.06);
 }
 
 .contact-info-container {
@@ -491,4 +577,46 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes floatPortrait {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal,
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+  }
 }
