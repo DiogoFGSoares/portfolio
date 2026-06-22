@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Job Application OS dashboard preview</title>
+  <desc id="desc">A clean dashboard showing job application tracking cards and a recruiting email inbox.</desc>
+  <rect width="960" height="620" rx="32" fill="#eef5f4"/>
+  <rect x="48" y="44" width="864" height="532" rx="20" fill="#ffffff" stroke="#cbd9d7" stroke-width="3"/>
+  <rect x="48" y="44" width="864" height="86" rx="20" fill="#0f766e"/>
+  <rect x="48" y="110" width="864" height="20" fill="#0f766e"/>
+  <rect x="82" y="70" width="34" height="34" rx="9" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <path d="M91 70v-7a8 8 0 0 1 16 0v7m-16 14h16" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <text x="132" y="83" fill="#ffffff" font-family="Arial, sans-serif" font-size="25" font-weight="700">Job Application OS</text>
+  <text x="132" y="105" fill="#c5ede7" font-family="Arial, sans-serif" font-size="15">Application Tracker</text>
+  <rect x="82" y="164" width="142" height="93" rx="12" fill="#f6f8f8" stroke="#d5e1df"/>
+  <rect x="241" y="164" width="142" height="93" rx="12" fill="#f6f8f8" stroke="#d5e1df"/>
+  <rect x="400" y="164" width="142" height="93" rx="12" fill="#f6f8f8" stroke="#d5e1df"/>
+  <text x="102" y="194" fill="#596969" font-family="Arial, sans-serif" font-size="14">Applied</text>
+  <text x="102" y="235" fill="#182827" font-family="Arial, sans-serif" font-size="34" font-weight="700">12</text>
+  <text x="261" y="194" fill="#596969" font-family="Arial, sans-serif" font-size="14">Interviews</text>
+  <text x="261" y="235" fill="#182827" font-family="Arial, sans-serif" font-size="34" font-weight="700">4</text>
+  <text x="420" y="194" fill="#596969" font-family="Arial, sans-serif" font-size="14">Next actions</text>
+  <text x="420" y="235" fill="#182827" font-family="Arial, sans-serif" font-size="34" font-weight="700">3</text>
+  <rect x="82" y="285" width="525" height="255" rx="14" fill="#ffffff" stroke="#d5e1df"/>
+  <text x="108" y="322" fill="#182827" font-family="Arial, sans-serif" font-size="19" font-weight="700">Applications</text>
+  <line x1="104" y1="348" x2="583" y2="348" stroke="#d5e1df" stroke-width="2"/>
+  <text x="108" y="379" fill="#182827" font-family="Arial, sans-serif" font-size="16" font-weight="700">Tripadvisor</text>
+  <text x="108" y="402" fill="#6c7c7a" font-family="Arial, sans-serif" font-size="14">Frontend Engineer</text>
+  <rect x="372" y="368" width="102" height="27" rx="13" fill="#d7f1ed"/>
+  <text x="391" y="387" fill="#0f766e" font-family="Arial, sans-serif" font-size="12" font-weight="700">TECH SCREEN</text>
+  <line x1="104" y1="426" x2="583" y2="426" stroke="#e5edec" stroke-width="2"/>
+  <text x="108" y="457" fill="#182827" font-family="Arial, sans-serif" font-size="16" font-weight="700">Remote</text>
+  <text x="108" y="480" fill="#6c7c7a" font-family="Arial, sans-serif" font-size="14">Software Engineer</text>
+  <rect x="372" y="446" width="85" height="27" rx="13" fill="#eef0ff"/>
+  <text x="390" y="465" fill="#4255b6" font-family="Arial, sans-serif" font-size="12" font-weight="700">APPLIED</text>
+  <rect x="631" y="285" width="247" height="255" rx="14" fill="#f4faf9" stroke="#d5e1df"/>
+  <text x="657" y="322" fill="#182827" font-family="Arial, sans-serif" font-size="19" font-weight="700">Gmail inbox</text>
+  <circle cx="662" cy="367" r="8" fill="#e4a11b"/>
+  <text x="681" y="372" fill="#314240" font-family="Arial, sans-serif" font-size="14" font-weight="700">Interview scheduled</text>
+  <text x="681" y="393" fill="#6c7c7a" font-family="Arial, sans-serif" font-size="12">Recruiting team</text>
+  <line x1="657" y1="419" x2="852" y2="419" stroke="#d5e1df" stroke-width="2"/>
+  <circle cx="662" cy="451" r="8" fill="#0f766e"/>
+  <text x="681" y="456" fill="#314240" font-family="Arial, sans-serif" font-size="14" font-weight="700">Application received</text>
+  <text x="681" y="477" fill="#6c7c7a" font-family="Arial, sans-serif" font-size="12">Talent team</text>
+</svg>

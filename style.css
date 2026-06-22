@@ -517,6 +517,26 @@ article .icon {
   color: black;
 }
 
+.project-description {
+  margin: 0 1rem 0.8rem;
+  text-align: left;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.project-stack {
+  margin: 0 1rem 1.25rem;
+  color: #147efb;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.job-os-project {
+  border-color: rgba(15, 118, 110, 0.34);
+}
+
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
