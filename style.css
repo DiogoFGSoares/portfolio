@@ -464,7 +464,9 @@ article .icon {
 
 #projects {
   position: relative;
-  /* height: auto; */
+  height: auto;
+  min-height: 96vh;
+  padding-bottom: 8rem;
 }
 
 #projects .project-grid {
