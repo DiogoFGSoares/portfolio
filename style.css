@@ -8,8 +8,16 @@ body {
   font-family: "Poppins", sans-serif;
   color: #171717;
   background:
-    radial-gradient(circle at top left, rgba(20, 126, 251, 0.12), transparent 28%),
-    radial-gradient(circle at top right, rgba(255, 182, 193, 0.2), transparent 24%),
+    radial-gradient(
+      circle at top left,
+      rgba(20, 126, 251, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(255, 182, 193, 0.2),
+      transparent 24%
+    ),
     linear-gradient(180deg, #fcfdff 0%, #f4f7fb 100%);
 }
 
@@ -463,8 +471,6 @@ article .icon {
 
 #projects {
   position: relative;
-  height: auto;
-  min-height: 96vh;
   padding-bottom: 8rem;
 }
 
@@ -510,7 +516,9 @@ article .icon {
   height: 220px;
   object-fit: cover;
   display: block;
-  transition: transform 400ms ease, filter 400ms ease;
+  transition:
+    transform 400ms ease,
+    filter 400ms ease;
 }
 
 .project-title {
